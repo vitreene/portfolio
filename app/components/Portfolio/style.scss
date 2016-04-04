@@ -1,0 +1,303 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:300,500,700,300italic);
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
+
+body{
+  font-family: 'Fira Sans';
+  font-size: 1rem;
+}
+p,img{
+      margin: 0;
+    padding: 0;
+}
+
+.sujets{
+  display: flex;
+  flex-flow: row wrap;
+  padding:1rem;
+}
+.sujet{
+  position: relative;
+  display: block;
+
+  flex: 1 1 33.33%;
+  max-width: 33.33%;
+  // largeur du conteneur ÷ nombre de pavés par ligne x 4/3 (proportion) exprimé en unités vw :
+  height: 20vw;
+  overflow: hidden;
+  background-color: aqua;
+  border: thin solid white;
+  white-space: nowrap;
+//  text-align: center;
+  transform-origin: center;
+  background-position: center;
+  background-size: cover;
+
+   user-select: none;
+
+  &:before{
+    content: url(../../assets/chevron-gauche.svg);
+    transform: rotateZ(-90deg);
+    position: absolute;
+    top:5%;
+    right: 5%;
+    width:20px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    transition-delay: 0.3s;
+  }
+  &:hover:before,
+  &:active:before{
+    opacity: 1;
+  }
+
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform-origin: top left;
+    transform: translateX(0%) translateY(100%)  scale(1) rotateZ(0) ;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    background-color: rgba(13, 161, 240, 0.8);
+  }
+  &:hover:after,
+  &:active:after{
+    transform: translateX(-10%) translateY(100%)  scale(2) rotateZ(-37deg) ;
+    opacity: 1;
+  }
+  img{
+  width: 100%;
+  }
+
+  .legende-wrapper{
+    //float: right;
+    //margin-top: 50%;
+    white-space: initial;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 10%;
+    max-width:40%;
+    max-height:2rem;
+    font-weight: bold;
+    color: ghostwhite;
+    opacity: 0;
+    transition: opacity 0.3s;
+    span{
+      //position: relative;
+      //display: inline-block;
+     // left:0;
+      // outline: 1px solid red;
+      text-overflow:ellipsis
+
+    }
+  }
+  &:hover .legende-wrapper{
+    opacity: 1;
+  }
+}
+
+.container {
+  height: 280px;
+  width: 260px;
+  text-align: center;
+
+  border: 1px solid red; /* Afin de bien voir que c'est centré dans la boîboîte */
+}
+
+.container:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.container img {
+    vertical-align: middle;
+}
+
+
+.panel{
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  padding: 2rem;
+  background-color: cornflowerblue;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  overflow: scroll;
+  h2{
+    margin: 0;
+    font-size: 2rem;
+  }
+  h3{
+    margin: 0.8rem 0 0.2rem ;
+    font-size: 1.2rem;
+  }
+  p{
+    line-height: 1.5;
+    font-weight: lighter;
+  }
+}
+
+.panel-titre{
+  flex: 1 1 100%;
+}
+
+.panel-carrousel{
+  flex: 1 1 60%;
+  width: 60% ;
+  padding: 0.5rem;
+}
+.panel-carrousel--cadre{
+  display: flex;
+  flex-flow: column nowrap;;
+  margin-bottom: 1rem;
+  height: 50vh;
+  height: calc(70vw * 9 / 16);
+  // outline: 1px solid red;
+}
+
+.panel-carrousel--cadre-vues{
+  flex:1 ;
+  position: relative;
+  overflow: hidden;
+  //width: 100%;
+  //height: 100%;
+  // outline: 1px solid green;
+
+}
+.panel-carrousel--cadre-img{
+  position: absolute;
+  width: 100%;
+  top:0;
+  text-align: center;
+  // outline: 1px solid cyan;
+
+}
+
+.panel-cadre-img{
+  // width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  display: inline-block;
+}
+
+.panel-carrousel--cadre-plots{
+  display: block;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.5rem;
+}
+.panel-texte-commentaire{
+  flex: 1 1 30%;
+  width: 30%;
+  margin-top: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.panel-texte--contexte{
+  //flex: 0 1 65%;
+  //width: 65%;
+}
+
+.panel-close{
+  position: absolute;
+  right: 1vw;
+  top: 1vw;
+  margin: 0;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+.stuck{
+  position:fixed;
+}
+.show{
+
+//  left:0;
+  opacity: 1;
+//  margin: 0 auto;
+//  display:block;
+//  transform: scale(1) ;
+ transition: opacity 0.6s;
+}
+.hide{
+  opacity: 0;
+  transition-property: opacity, left ;
+  transition-delay: 0s, 0.6s;
+  transition-duration: 0.6s, 0s ;
+// transition-delay: 0.4s;
+// transition: opacity 0.4s;
+
+//  left: -200%;
+
+}
+.slide-vertical{
+    overflow: scroll;
+}
+.vertical{
+//  height:100%;
+//  width:auto;
+img{
+  min-width: inherit;
+  min-height: 100%;
+}
+}
+.plots-current{
+  color: aliceblue;
+}
+.panel-carrousel--cadre-plots{
+  list-style-image: none;
+  color:black;
+  padding: 0;
+}
+.panel-carrousel--cadre-plots li{
+  margin: 0 .3rem 0 0 ;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.2s;
+  &:hover{
+    transform: scale(1.4);
+    color:slategrey;
+    }
+}
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+#my-scroll {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}

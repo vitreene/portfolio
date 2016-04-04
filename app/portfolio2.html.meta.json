@@ -1,0 +1,152 @@
+{
+  "portfolio":[
+{
+  "vignette": "home-huwans-vgn.jpg",
+  "vignette-titre" : "e-commerce : accueil",
+  "categorie": "site",
+  "type": "web",
+  "marque": "huwans clubaventure",
+  "detail":{
+    "modele":"defaut",
+    "titre": "Page d'accueil",
+    "intro": "##La marque \n Huwans est un tour-opérateur spécialisé dans le voyage-randonnée en groupes constitués, dans le monde entier. \n Cette approche singulière du voyage – le slow travel – nécessite d’en expliquer le concept, tout en gardant la priorité sur l’approche commerciale de la vente.",
+    "files":[
+      {
+        "file": "home-huwans-01.jpg",
+        "legende" : "page d'accueil du site",
+        "action": "slide-vertical"
+      },
+      {
+        "file": "home-huwans-03.jpg",
+        "legende" : "Carrousel",
+        "action": ""
+      },
+      {
+        "file": "home-huwans-04.jpg",
+        "legende" : "Carrousel",
+        "action": ""
+      },
+      {
+        "file": "home-huwans-02.jpg",
+        "legende" : "détail de la recherche",
+        "action": ""
+      },
+    ],
+    "texte":"##Carrousel corporate \n Déprécié, le carrousel est acceptable dans ce cas ou un seul  concept est exprimé par plusieurs images. Ici, des situations identiques de rencontres sur plusieurs continents, réunis par une même accroche. \n ##Le détail  \n Un slider propose une sélection de voyages dont il n'est montré qu’une partie. L’ombré de part et d’autre donne la sensation d’une découpe à travers laquelle défilent les offres. \n  La plus à droite est légèrement tronquée pour accentuer l’impression. Les flèches et l’ascenseur horizontal, très discrets, vient confirmer la possibilité d'un défilement. \n ##CTA \n L’action privilégiée sur cette page est d’initier une recherche. Le bloc déborde sur l’image du carrousel, le calcul du nombre d’offres disponibles se met à jour dynamiquement."
+  }
+},
+
+{
+  "vignette": "catal-club-vgn.jpg",
+  "vignette-titre" : "treks et randonnées : catalogue",
+  "categorie": "catalogue",
+  "type": "print",
+  "marque": "clubaventure",
+  "detail":{
+    "modele":"defaut",
+    "titre": "Catalogues de voyage",
+    "intro": "##La marque \n clubaventure est un tour-opérateur spécialisé dans le voyage-randonnée en groupes constitués, dans le monde entier. \n Cette approche singulière du voyage – le slow travel – nécessite d’en expliquer le concept, tout en gardant la priorité sur l’approche commerciale de la vente.",
+    "files":[
+      { "file": "catal-club-01.jpg"},
+      { "file": "catal-club-02.jpg"},
+      { "file": "catal-club-03.jpg"},
+      { "file": "catal-club-04.jpg"},
+      { "file": "catal-club-05.jpg"},
+      { "file": "catal-club-06.jpg"}
+    ],
+    "texte":"Ces brochures ont un rythme de parution bi-annuelle, le tirage est de l’ordre de 60 à 80 000 ex. Elles comportent jusqu’à 400 pages et 2 variantes pour les prix affichés en euros ou en francs suisses. \n La maquette est conçue pour être très souple d’usage : le moins possible de blocs, le plus de rendus contrôlés par les feuilles de styles. \n Les différentes déclinaisons de gamme – jusqu’à huit – fonctionnent sur un socle commun, avec des ajustement relatifs au positionnement du catalogue : plus aéré pour les voyages d’exception, plus détaillé pour les voyages en famille par exemple. \n Elles sont réalisées avec une équipe interne en six à huit semaines. Des process d’automatisation partiels sont plis en place - voir en particulier [l’article](http://vitreene.com/articles/un-catalogue-papier-est-un-site-web-comme-un-autre/) sur ce sujet"
+  }
+},
+
+{
+  "vignette": "av-prem-vgn.jpg",
+  "vignette-titre" : "Action commerciale : ventes privées",
+  "categorie": "ope-co",
+  "type": "web",
+  "marque": "huwans clubaventure",
+  "detail":{
+    "modele":"defaut",
+    "titre": "Ventes privées",
+    "intro": "##La marque \n Huwans est un tour-opérateur spécialisé dans le voyage-randonnée en groupes constitués, dans le monde entier. \n Cette approche singulière du voyage – le slow travel – nécessite d’en expliquer le concept, tout en gardant la priorité sur l’approche commerciale de la vente.",
+    "files":[
+      {
+        "file": "av-prem-010.jpg",
+        "legende" : "liste des ventes",
+        "action": ""
+      },
+      {
+        "file": "av-prem-12.jpg",
+        "legende" : "inscription",
+        "action": ""
+      },
+      {
+        "file": "av-prem-02.jpg",
+        "legende" : "annonce display",
+        "action": ""
+      },
+      {
+        "file": "av-prem-03.jpg",
+        "legende" : "annonce display",
+        "action": "superpose"
+      },
+      {
+        "file": "av-prem-04.jpg",
+        "legende" : "annonce display",
+        "action": "superpose"
+      },
+      {
+        "file": "av-prem-05.jpg",
+        "legende" : "annonce display",
+        "action": "superpose"
+      },
+      {
+        "file": " av-prem-11.jpg",
+        "legende" : "e-mailing",
+        "action": ""
+      },
+      {
+        "file": "av-prem-13.jpg",
+        "legende" : "zoning de la page d'accueil",
+        "action": ""
+      },
+    ],
+    "texte":"Un mini-site pour permettre l’inscription à des ventes privées de voyages. \n Relayé par une campagne d’e-mailing, achat d’espaces, réseau Display. \n Les visuels, tirés de documents de voyage, sont découpés pour permettre les diverses combinaisons de format.  - [voir article](#) - \n ##Le détail. \n La présentation des ventes propose deux actions distinctes&nbsp;: se rendre sur la listes des voyages, et s’inscrire aux e-mails. Nous avons noté une faiblesse des inscriptions et engagé des actions correctives :  \n - amélioration du retour sur le mini site après la visite des voyages, \n - mieux différencier les boutons d’action. L’inscription aux alertes à pris la forme d’un interrupteur on/off "
+  }
+},
+{
+  "vignette": "-vgn.jpg",
+  "vignette-titre" : "page de recherche",
+  "categorie": "site",
+  "type": "web",
+  "marque": "huwans clubaventure",
+  "detail":{
+    "modele":"defaut",
+    "titre": "Résultats de recherche",
+    "intro": "##La marque \n Huwans est un tour-opérateur spécialisé dans le voyage-randonnée en groupes constitués, dans le monde entier. \n Cette approche singulière du voyage – le slow travel – nécessite d’en expliquer le concept, tout en gardant la priorité sur l’approche commerciale de la vente.",
+    "files":[
+      {
+        "file": " recherche-11.jpg",
+        "legende" : "résultats de recherche",
+        "action": ""
+      },
+      {
+        "file": " recherche-14.jpg",
+        "legende" : "résultats de recherche",
+        "action": ""
+      },
+      {
+        "file": " recherche-17.jpg",
+        "legende" : "résultats de recherche",
+        "action": ""
+      },
+      {
+        "file": " recherche-18.jpg",
+        "legende" : "remise à zéro des dates",
+        "action": ""
+      },
+    ],
+    "texte":"##Améliorer l’existant. \n La recherche à facettes propose de nombreux critères  sans hiérarchie. Un analyse a montré que les critères les plus fréquemment employés étaient la destination et les dates, pour un type de voyage donné. \n Le choix a été fait de pré-sélectionner ces principaux critères sur une zone horizontale. Les critères secondaires sont regroupés dans la sidebar et servent à affiner la sélection. \n La présentation des voyages est toujours un arbitrage difficile sur les critères à retenir, c’est pourquoi plusieurs vues sont proposées, valorisant la description, l’image ou l’itinéraire. \n Dans la vue descriptive, une version propose des listes raccourcies, un cliquet permet de déployer une vue plus détaillée. Cette proposition sera sans suite. \n ##Le détail. \n Les critères sur la ligne horizontale peuvent être retirés en  cliquant sur la petite croix. Ils se retrouvent alors dans la sidebar. Cependant, pour les dates, qui est un critère impératif, la croix permet tout simplement la remise à zéro de la période recherchée. "
+  }
+},
+
+  ]}

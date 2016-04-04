@@ -1,0 +1,30 @@
+{
+	"details": {
+		"modele": "defaut",
+		"titre": "Page d’accueil",
+		"intro": "### La marque \n Huwans est un tour-opérateur spécialisé dans le voyage-randonnée en groupes constitués, dans le monde entier. \n Cette approche singulière du voyage – le slow travel – nécessite d’en expliquer le concept, tout en gardant la priorité sur l’approche commerciale de la vente.",
+		"files1": {
+			"file": "home-huwans-01.jpg",
+			"legende": "page d’accueil du site",
+			"action": "slide-vertical"
+		},
+		"files": [{
+			"file": "home-huwans-01.jpg",
+			"legende": "page d'accueil du site",
+			"action": "slide-vertical"
+		}, {
+			"file": "home-huwans-03.jpg",
+			"legende": "Carrousel",
+			"action": ""
+		}, {
+			"file": "home-huwans-04.jpg",
+			"legende": "Carrousel",
+			"action": ""
+		}, {
+			"file": "home-huwans-02.jpg",
+			"legende": "détail de la recherche",
+			"action": "vertical"
+		}],
+		"texte": "### Carrousel corporate \n Déprécié, le carrousel est acceptable dans ce cas ou un seul  concept est exprimé par plusieurs images. Ici, des situations identiques de rencontres sur plusieurs continents, réunis par une même accroche. \n ### Le détail  \n Un slider propose une sélection de voyages dont il n'est montré qu’une partie. L’ombré de part et d’autre donne la sensation d’une découpe à travers laquelle défilent les offres. \n  La plus à droite est légèrement tronquée pour accentuer l’impression. Les flèches et l’ascenseur horizontal, très discrets, vient confirmer la possibilité d'un défilement. \n ### CTA \n L’action privilégiée sur cette page est d’initier une recherche. Le bloc déborde sur l’image du carrousel, le calcul du nombre d’offres disponibles se met à jour dynamiquement."
+	}
+}

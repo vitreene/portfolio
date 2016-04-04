@@ -1,0 +1,36 @@
+{
+  "sujets": [
+    {
+      "id": "sujet001",
+      "vignette": "home-huwans-vgn.jpg",
+      "vignetteTitre": "e-commerce : Accueil",
+      "categorie": "site",
+      "type": "web",
+      "marque": "huwans clubaventure"
+    },
+    {
+      "id": "sujet002",
+      "vignette": "catal-club-vgn.jpg",
+      "vignetteTitre": "treks et randonnées : catalogue",
+      "categorie": "catalogue",
+      "type": "print",
+      "marque": "clubaventure"
+    },
+    {
+      "id": "sujet003",
+      "vignette": "avprem-vgn.jpg",
+      "vignetteTitre": "Action commerciale : ventes privées",
+      "categorie": "ope-co",
+      "type": "web",
+      "marque": "huwans clubaventure"
+    },
+    {
+      "id": "sujet004",
+      "vignette": "recherch-vgn.jpg",
+      "vignetteTitre" : "page de recherche",
+      "categorie": "site",
+      "type": "web",
+      "marque": "huwans clubaventure"
+    }
+  ]
+}
