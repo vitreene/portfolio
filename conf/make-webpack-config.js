@@ -33,7 +33,7 @@ module.exports = function(options) {
       'webpack/hot/only-dev-server',
       './app/index.jsx',
     ],
-    debug: !options.production,
+    debug: options.production,
     devtool: options.devtool,
     output: {
       path: options.production ? './dist' : './build',
@@ -124,6 +124,7 @@ module.exports = function(options) {
         production: true,
       }),
     ] : [
+      new ExtractTextPlugin("app.css"),
       new HtmlWebpackPlugin({
         template: './conf/tmpl.html',
       }),

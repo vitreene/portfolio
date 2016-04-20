@@ -1,20 +1,99 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
-    <title>Yet Another React Starter Kit</title>
-    {% if (o.htmlWebpackPlugin.options.production) { %}
-    <link rel="stylesheet" href="app.{%=o.webpack.hash%}.css" media="all">
-    {% } %}
-  </head>
-  <body>
-    <div id="my-scroll">
-      <div id="app"></div>
-      
-    </div>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
-    <script src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>
-    {% } %}
-  </body>
+  <title>Portfolio — vitreene</title>
+  <meta name="description" content="desiign et codde">
+
+  <link rel="stylesheet" href="../build/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  {% if (o.htmlWebpackPlugin.options.production) { %}
+  <link rel="stylesheet" href="app.{%=o.webpack.hash%}.css" media="all">
+  {% } %}
+</head>
+<body>
+    <div id="my-scroll">
+  <div class="conteneur">
+
+  <nav class="zone-menu stuck">
+    <a href="/" id='menu-logo' class="menu-logo menu-open">
+    </a>
+
+      <ul id='menu-links' class="menu-links">
+        <li id="menu-accueil" class="ico-item"><a href="/">Accueil</a></li>
+
+         <li class="ico-item"><a href="/articles"> <span class="ico-article"></span>  Articles</a></li>
+         <li class="ico-item"><a href="/portfolio"> <span class="ico-portfolio"></span>  Portfolio</a></li>
+         <li class="ico-item"><a href="/posts/portfolio-react"> <span class="ico-portfolio"></span>  Portfolio</a></li>
+         <li class="ico-item"><a href="/about"> <span class="ico-apropos"></span>  À propos</a></li>
+
+       <li id="menu-contact" class="ico-item item-contact"><a href="#contact-modal"> <span class="ico-contact"></span> Contact</a></li>
+
+      </ul>
+  </nav>
+  <h1 class="page-titre">Portfolio</h1>
+    <div id="portfolio"></div>
+
+
+
+
+<!-- </article>
+</main> -->
+  <footer class="footer-links">
+    <!-- <aside>templates/partials/footer.html</aside> -->
+    <section class="social-links">
+        <p class="ico-item item-twitter"><a href="https://twitter.com/mac_rve" target="blank"> <span class="ico-twitter"></span></a></p>
+        <p class="ico-item item-linkedIn"><a href="https://fr.linkedin.com/in/vitreene"><span class="ico-linkedIn"></span></a></p>
+        <p class="ico-item item-facebook"><a href="https://facebook.com/rve.mac"><span class="ico-facebook"></span></a></p>
+    </section>
+    <section class="site-links">
+        <p class="ico-item item-apropos"><a href="/about"><span class="ico-apropos"></span>A propos</a></p>
+        <p class="ico-item item-contact"><a href="#contact-modal"> <span class="ico-contact"></span>Contact</a></p>
+      </section>
+
+    </footer>
+
+  <aside id="contact-modal" class="contact-modal">
+    <button type="button" name="contact-close" id="contact-close" class="contact-close">
+      <svg id="ico-contact-close" class="ico-contact-close" viewBox="0 0 50 37" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.41">
+
+        <ellipse class="s0" cx="24.87" cy="20.97" rx="23.88" ry="15.15"/>
+        <ellipse class="s1" cx="24.87" cy="17.75" rx="22.27" ry="15.15"/>
+        <path class="s2" d="M18.23 12.8l6.63 4.94-6.63 4.97m13.27.03l-6.62-4.97 6.63-4.96"/>
+      </svg>
+    </button>
+
+  <h2>Contactez-moi</h2>
+
+
+    <form id="form-contact" class="form-contact" action="//formspree.io/contact@vitreene.com"
+          method="POST">
+          <label for="name">votre nom</label>
+          <input type="text" name="name" required>
+
+          <label for="_replyto">votre e-mail</label>
+          <input type="email" name="_replyto" required>
+
+          <label for="message">Que puis-je pour vous ?</label>
+          <textarea name="message" required></textarea>
+
+          <input type="text" name="_gotcha">
+          <input type="hidden" name="subject" value="sur la page : portfolio-react">
+          <input type="hidden" name="_next" value="/posts/portfolio-react">
+        <input type="submit" value="Envoyer">
+    </form>
+
+
+  </aside>
+</div>
+</div>
+  <script src="main.min.js"></script>
+
+  {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
+  <script src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>
+  {% } %}
+
+</body>
 </html>

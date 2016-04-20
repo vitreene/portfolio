@@ -22,7 +22,8 @@ p,img{
   flex: 1 1 33.33%;
   max-width: 33.33%;
   // largeur du conteneur ÷ nombre de pavés par ligne x 4/3 (proportion) exprimé en unités vw :
-  height: 20vw;
+  max-height: 20vw;
+  height: 15rem;
   overflow: hidden;
   background-color: aqua;
   border: thin solid white;
@@ -142,11 +143,14 @@ p,img{
   p{
     line-height: 1.5;
     font-weight: lighter;
+    font-size: 0.95em;
   }
 }
 
 .panel-titre{
   flex: 1 1 100%;
+  padding-left : 5rem ;
+  font-family: 'Fira Sans' ;
 }
 
 .panel-carrousel{
@@ -200,6 +204,14 @@ p,img{
   margin-top: 1.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  li{
+    list-style : square inside ;
+    margin-left: 0;
+    padding-left: 0.5em;
+    line-height: 1.5;
+    font-weight: lighter;
+    font-size: 0.95em;
+  }
 }
 
 .panel-texte--contexte{
@@ -215,10 +227,11 @@ p,img{
   padding: 0;
   width: 2rem;
   height: 2rem;
+  z-index: 1000;
 }
 
 .stuck{
-  position:fixed;
+//  position:fixed;
 }
 .show{
 
@@ -300,4 +313,32 @@ img{
   width: 100%;
   height: 100%;
   overflow: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .panel{
+      padding: 0.5rem;
+  }
+
+  .panel-carrousel {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  .panel-texte-commentaire {
+    flex: 1 1 100%;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .panel-titre {
+    flex: 1 1 100%;
+    text-align: center;
+    font-family: 'Fira Sans';
+    padding-left: 0;
+  }
+  .panel-carrousel--cadre {
+    height: 50vh;
+    min-height: calc(70vw * 9 / 16);
+  }
 }

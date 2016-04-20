@@ -13,7 +13,7 @@ import Marked from 'marked'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 console.log('REACT LANCé');
-
+/*
 const sujets = [
   {
     "id":"sujet001",
@@ -84,6 +84,7 @@ const details = {
   ],
   "texte":"### Carrousel corporate \n Déprécié, le carrousel est acceptable dans ce cas ou un seul  concept est exprimé par plusieurs images. Ici, des situations identiques de rencontres sur plusieurs continents, réunis par une même accroche. \n ### Le détail  \n Un slider propose une sélection de voyages dont il n'est montré qu’une partie. L’ombré de part et d’autre donne la sensation d’une découpe à travers laquelle défilent les offres. \n  La plus à droite est légèrement tronquée pour accentuer l’impression. Les flèches et l’ascenseur horizontal, très discrets, vient confirmer la possibilité d'un défilement. \n ### CTA \n L’action privilégiée sur cette page est d’initier une recherche. Le bloc déborde sur l’image du carrousel, le calcul du nombre d’offres disponibles se met à jour dynamiquement."
   };
+*/
 
 var itemsInRow = 3 ;
 
@@ -129,7 +130,7 @@ var ControlListeSujetBox = React.createClass({
 
     return (
       <ListeSujetBox
-      data = {this.props.data}
+      data = {this.props}
       panel = {this.state.togglePanel}
       sujet = {this.state.sujet}
       setTogglePanel = {this.setTogglePanel}
@@ -142,7 +143,10 @@ var ControlListeSujetBox = React.createClass({
 var ListeSujetBox = React.createClass({
 
   render: function() {
-    console.log('PROPS', this.props.data);
+    //console.log('PROPS:sujets', this.props.data.sujets);
+    //console.log('PROPS:details', this.props.data.details);
+    console.log('PROPS', this.props);
+    console.log('this.props.sujet', (this.props.sujet) );
     var sujets = [] ;
 
     // 3 conditions pour placer le panel :
@@ -153,16 +157,20 @@ var ListeSujetBox = React.createClass({
     var isOpenPanel = this.props.panel; //-> state
     var isOnRow=0 ;
     var isFinDeLigne = 0 ;
+    var details =(this.props.sujet) ?
+        getDetail(this.props.sujet.toggle.id, this.props.data.details)[0] :
+        null;
+        console.log("DETAILS",details);
 
-    for(var i=0; i<this.props.data.length; i++) {
-      var sujet = this.props.data[i];
+    for(var i=0; i<this.props.data.sujets.length; i++) {
+      var sujet = this.props.data.sujets[i];
 
       if (this.props.sujet){
        isOnRow += ( sujet.id == this.props.sujet.toggle.id ) ;
       }
 
       isFinDeLigne = !( (i+1) % itemsInRow ) ||
-         ( i === this.props.data.length -1 );
+         ( i === this.props.data.sujets.length -1 );
 
       sujets.push (
        <SujetBox
@@ -184,7 +192,11 @@ var ListeSujetBox = React.createClass({
       } ;
 
    }
-
+   function getDetail(id, details) {
+     return details.filter( function(detail){
+       return (id===detail.id) ;
+     });
+   }
     return (
       <ul id="sujets" className="sujets">
        {sujets}
@@ -314,7 +326,7 @@ var CarrouselPanel = React.createClass({
     next = (typeof(next) == 'Number' ) ? next : !this.state.pause ;
     var visible = (this.state.visible + next ) % this.props.data.length ;
     visible = (visible < 0) ? this.props.data.length -1 : visible ;
-    console.log('NEXT', visible, next, !this.state.pause );
+  //  console.log('NEXT', visible, next, !this.state.pause );
     this.setState({ visible : visible } ) ;
   },
   pause:function(){
@@ -344,6 +356,20 @@ var CarrouselPanel = React.createClass({
     this.timer(charCode[event.keyCode] || 0 ) ;
   },
   render: function(){
+                      /*
+                      filtrer, puis mapper
+                      Bloop.createClass({
+                    render: function() {
+                      var items = this.props.items.filter(function(item) {
+                        return item.isVisible;
+                      });
+
+                      return items.map(function(item) {
+                        return dom.div(item.name);
+                      });
+                    }
+                  })
+                  */
     var imgs = this.props.data.map( function(img, i) {
       var _id = 'cadre-img' + i ;
       var visible = ( this.state.visible == i) ? 'show' : 'hide' ;
