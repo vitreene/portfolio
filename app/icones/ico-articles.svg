@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69 56" stroke-linejoin="round">
+  <style>
+    .s0, .s1{ transition : all 0.3s ; } .s0{ fill:rgb(0,64,128); } .s1{ fill:white; stroke:rgb(0,64,128); } .s2{ fill:white; } .s3{ fill-opacity:0.5; fill:rgb(0,64,128); } #icone:hover .s0{ fill:#1AC2E6; } #icone:hover .s1{ stroke:#1AC2E6; }
+  </style>
+  <g id="icone">
+    <g id="Articles">
+      <path d="M1297 561L1371 616 1297 671 1223 616 1297 561Z" class="s3" transform="translate(-506.023 -224.513) scale(.4166)"/>
+      <path d="M1297 561L1371 616 1297 671 1223 616 1297 561Z" class="s1" stroke-width="9.6" transform="translate(-506.023 -230.242) scale(.4166)"/>
+      <path d="M1292.52 565.46L1299.48 570.61 1229.97 621.16 1223 616 1292.52 565.46Z" class="s0" transform="matrix(.3193 0 0 .3214 -379.18 -171.095)"/>
+      <path d="M1297 561L1303.97 566.16 1229.97 621.16 1223 616 1297 561Z" class="s0" transform="matrix(.3193 0 0 .3214 -374.696 -167.87)"/>
+      <path d="M1285.79 569.91L1292.76 575.07 1229.97 621.16 1223 616 1285.79 569.91Z" class="s0" transform="matrix(.3193 0 0 .3214 -370.21 -164.645)"/>
+      <path d="M1258.88 589.96L1265.85 595.12 1229.97 621.16 1223 616 1258.88 589.96Z" class="s0" transform="matrix(.3193 0 0 .3214 -365.727 -161.42)"/>
+      <path d="M261.04 44.15L257.17 44.36 251 85 269 85 261.04 44.15Z" class="s0" transform="matrix(.549 .2054 .0747 -.1998 -100.31 -11.513)"/>
+      <path d="M268.9 39.76L251 43 251 85 269 85 268.9 39.76Z" class="s0" transform="matrix(.549 .2054 -.1704 .4555 -79.467 -67.206)"/>
+      <path d="M268.9 39.76L251 43 251 85 269 85 268.9 39.76Z" class="s1" transform="matrix(.1092 .041 -.1704 .4555 32.92 -25.148)"/>
+      <path d="M279.48 37.88L271.52 39.27 251 85 269 85 279.48 37.88Z" class="s2" transform="matrix(.1092 .041 .066 -.1763 12.824 28.553)"/>
+      <circle cx="1295.5" cy="610.5" r="73.5" class="s1" stroke-width="37.42" transform="matrix(.0613 0 0 .0417 -23.208 -20.276)"/>
+    </g>
+  </g>
+</svg>

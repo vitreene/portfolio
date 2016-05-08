@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 27 37" version="1.1" xml:space="preserve" stroke-linejoin="round">
+
+  <style>
+    .s0{
+      fill:none;
+      stroke:white;
+      stroke-width:15;
+    }
+
+    #icone:hover .s0{
+    fill:#1AC2E6;
+    }
+
+
+  </style>
+    <g transform="matrix(1,0,0,1,-126.536,-1245.59)" id="icone">
+        <g transform="matrix(1,0,0,1,0,10)">
+            <g transform="matrix(0.268043,7.51842e-17,-5.82153e-17,0.268043,-197.816,1088.68)">
+                <path d="M1297,671L1223,616L1297,561" class="s0"/>
+            </g>
+        </g>
+    </g>
+</svg>

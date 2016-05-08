@@ -6,9 +6,10 @@
 
   <title>Portfolio — vitreene</title>
   <meta name="description" content="desiign et codde">
-
-  <link rel="stylesheet" href="../build/css/main.css">
+<!--
+  <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="app.css">
+-->
   {% if (o.htmlWebpackPlugin.options.production) { %}
   <link rel="stylesheet" href="app.{%=o.webpack.hash%}.css" media="all">
   {% } %}
@@ -89,7 +90,7 @@
   </aside>
 </div>
 </div>
-  <script src="main.min.js"></script>
+  <!-- <script src="http://localhost:8080/main.min.js"></script> -->
 
   {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
   <script src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>

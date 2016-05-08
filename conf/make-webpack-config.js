@@ -2,6 +2,7 @@ var fs = require('fs');
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 function extractForProduction(loaders) {
   return ExtractTextPlugin.extract('style', loaders.substr(loaders.indexOf('!')));
@@ -32,6 +33,15 @@ module.exports = function(options) {
       'webpack-dev-server/client?http://localhost:8080',
       'webpack/hot/only-dev-server',
       './app/index.jsx',
+      './app/vendor/main.min.js',
+      './app/css/main.css',
+      './app/components/Portfolio/style.scss',
+      /*
+      {
+        vendor: './app/vendor/main.min.js',
+        css: './app/css/main.css'
+      }
+      */
     ],
     debug: options.production,
     devtool: options.devtool,
@@ -125,9 +135,22 @@ module.exports = function(options) {
       }),
     ] : [
       new ExtractTextPlugin("app.css"),
+      // new ExtractTextPlugin("main.css"),
+      // new ExtractTextPlugin("main.min.js"),
       new HtmlWebpackPlugin({
         template: './conf/tmpl.html',
       }),
+      /*
+      new CopyWebpackPlugin([{
+        from:'app/css/main.css',
+        to: 'main.css'
+      },
+      {
+        from:'app/vendor/main.min.js',
+        to: 'main.min.js'
+      },
+    ])
+    */
     ],
   };
 };

@@ -10,7 +10,7 @@
     "test:watch": "./node_modules/karma/bin/karma start conf/karma.conf.js",
     "test:coverage": "./node_modules/karma/bin/karma start conf/karma.coverage.conf.js --single-run",
     "test:ci": "./node_modules/karma/bin/karma start conf/karma.ci.conf.js --single-run",
-    "start": "./node_modules/.bin/webpack-dev-server --config conf/webpack.config.js --hot --progress --colors --content-base ./build",
+    "start": "./node_modules/.bin/webpack-dev-server --config conf/webpack.config.js --inline --hot --progress --colors --content-base ./build",
     "build": "./node_modules/.bin/webpack --config conf/webpack.production.js",
     "autosite": "./node_modules/.bin/webpack --config conf/webpack.autosite.js",
     "build:gh": "npm run build && node ./build-gh-pages.js && rm -r ./dist"
@@ -20,6 +20,7 @@
     "marked": "^0.3.5",
     "react": "^0.14.0",
     "react-addons-css-transition-group": "^0.14.8",
+    "react-css-transition-replace": "^1.2.0-beta",
     "react-dom": "^0.14.0"
   },
   "devDependencies": {

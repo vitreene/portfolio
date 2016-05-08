@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67 49" stroke-linejoin="round">
+  <style>
+    .s0{ fill:rgb(128,160,192); stroke-width:30; stroke:rgb(128,160,192); } .s1{ fill:white; stroke:rgb(0,64,128); } .s2{ fill:white; } .s3{ fill-opacity:0.5; fill:rgb(0,64,128); } #icone:hover .s1{ stroke:#1AC2E6; }
+  </style>
+  <g id="icone">
+    <g id="Accueil">
+      <circle cx="1295.5" cy="610.5" r="73.5" class="s3" transform="matrix(-.433 0 0 -.275 594.454 195.785)"/>
+      <circle cx="1295.5" cy="610.5" r="73.5" class="s1" stroke-width="11.58" transform="matrix(.404 0 0 .275 -490.263 -144.152)"/>
+      <path d="M1297 561L1371 616 1297 671 1223 616 1297 561Z" class="s1" transform="matrix(.133 0 0 .133 -149.05 -61.425)"/>
+      <circle cx="1295.5" cy="610.5" r="73.5" class="s1" transform="matrix(.126 0 0 .086 -121.245 -21.023)"/>
+      <circle cx="1295.5" cy="610.5" r="73.5" class="s1" stroke-width="37" transform="matrix(.126 0 0 .086 -121.245 -24.603)"/>
+      <path d="M1297 561L1371 616 1297 671 1223 616 1297 561Z" class="s1" stroke-width="30" transform="matrix(.133 0 0 .133 -149.05 -65.005)"/>
+    </g>
+  </g>
+</svg>

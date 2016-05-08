@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67 49" stroke-linejoin="round">
+  <style>
+    .s0, .s1{ transition : stroke 0.3s ; } .s0{ fill:rgb(0,64,128); } .s1{ fill:none; stroke-width:11.58; stroke:rgb(0,64,128); } .s2{ fill:white; } .s3{ fill-opacity:0.5; fill:rgb(0,64,128); } #icone:hover .s0{ fill:#1AC2E6; } #icone:hover .s1{ stroke:#1AC2E6; }
+  </style>
+  <g id="icone">
+    <g id="a propos">
+      <circle cx="1295.5" cy="610.5" r="73.5" class="s3" transform="matrix(-.43326 0 0 -.2749 594.447 195.786)"/>
+      <g transform="matrix(-.40404 0 0 -.2749 556.592 191.49)">
+        <circle cx="1295.5" cy="610.5" r="73.5" class="s2"/>
+        <clipPath id="_clip1">
+          <circle cx="1295.5" cy="610.5" r="73.5"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+          <circle cx="1295.5" cy="610.5" r="73.5" class="s0" transform="matrix(0 .61157 -.2831 0 1468.332 -176.01)"/>
+          <circle cx="1295.5" cy="610.5" r="73.5" class="s0" transform="rotate(180 1091.895 468.956) scale(.68567)"/>
+          <path d="M1280.478 547.988h30.055l-7.513 46.676h-15.028l-7.514-46.676z" class="s0"/>
+        </g>
+        <circle cx="1295.5" cy="610.5" r="73.5" class="s1"/>
+      </g>
+    </g>
+  </g>
+</svg>
+

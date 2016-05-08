@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"  viewBox="0 0 23 40" version="1.1" xml:space="preserve" stroke-linejoin="round">
+<style>
+.s0{
+	fill:none;
+	stroke-width:3;
+	stroke:#004080;
+	transition : stroke 0.3s ;
+}
+.s0:hover{
+stroke:#1AC2E6;
+}
+</style>
+<path d="M19.42 36.86l0-16.38M19.42 15.11l0-6.5M2.61 2.6c0 0 0 18.07 0 18.23 -0.19 6.31 1.73 14.67 10.95 14.53" class="s0"/>
+</svg>

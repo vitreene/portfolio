@@ -1061,6 +1061,7 @@ svg .s2 {
   stroke: #004080;
 }
 
+svg  .s1:hover,
 svg .next:hover .s1,
 svg .prec:hover .s1,
 svg .close:hover .s1 {
@@ -1237,8 +1238,8 @@ svg .close:hover .s1 {
 
 .invisible {
   position: relative;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
   opacity: 0;
   -webkit-transition: all 0.2s;
           transition: all 0.2s;

@@ -1,0 +1,16 @@
+<svg width="100" height="100" viewBox="0 0 30 20"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" stroke-linejoin="round">
+  <style>
+    .trait{
+      fill:none;
+      stroke:#ebf0f5;
+      stroke-width: 1;
+    }
+  </style>
+  <clipPath id="_clip1">
+    <rect x="0" y="0" width="30" height="20"/>
+  </clipPath>
+  <g clip-path="url(#_clip1)">
+    <line x1="0" y="0" x2="30" y2="20" class="trait"/>
+    <line x1="30" y="0" x2="0" y2="20" class="trait"/>
+  </g>
+</svg>
