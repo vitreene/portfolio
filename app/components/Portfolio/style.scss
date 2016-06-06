@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans:300,500,700,300italic);
 @import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
 
+
 body{
   font-family: 'Fira Sans';
   font-size: 1rem;
@@ -33,11 +34,12 @@ p,img{
   background-position: center;
   background-size: cover;
 
-   user-select: none;
+  cursor: pointer;
+  user-select: none;
 
   &:before{
-    content: url(../../assets/chevron-gauche.svg);
-    transform: rotateZ(-90deg);
+    // SVG : chevron pointant vers le bas
+    content: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzcgMjciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxLjQxNCI+CiAgPHBhdGggZD0iTTMyLjk2NyAzLjQ4MkwxOC4yMjQgMjMuMzE3IDMuNDgyIDMuNDgyIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZT0iI2ZmZiIvPgo8L3N2Zz4=");
     position: absolute;
     top:5%;
     right: 5%;
@@ -121,6 +123,23 @@ p,img{
     vertical-align: middle;
 }
 
+.panel.lightbox{
+  flex-flow: column nowrap;
+  .panel-titre{
+    margin-bottom: 2rem;
+    flex: initial;
+  }
+  .panel-carrousel{
+    width:100%;
+    flex: 1 1 100%;
+  }
+  .panel-carrousel--cadre-legende{
+    display: block;
+  }
+  .panel-texte-commentaire{
+    display:none;
+  }
+}
 
 .panel{
   position: relative;
@@ -138,8 +157,8 @@ p,img{
     color: white;
   }
   h3{
-    margin: 0.8rem 0 0.2rem ;
-    font-size: 1.2rem;
+    margin: 0.8rem 0 0 ;
+    font-size: 1.1rem;
   }
   p{
     line-height: 1.5;
@@ -155,7 +174,7 @@ p,img{
 
 .panel-titre{
   flex: 1 1 100%;
-  padding-left : 5rem ;
+  //padding-left : 5rem ;
   font-family: 'Fira Sans' ;
 }
 
@@ -163,56 +182,89 @@ p,img{
   flex: 1 1 60%;
   width: 60% ;
   padding: 0.5rem;
-
   display: flex;
   flex-flow: column nowrap;
 }
 .panel-carrousel--cadre{
   display: flex;
-  flex-flow: column nowrap;;
-  margin-bottom: 1rem;
+  flex-flow: column nowrap;
+  //margin-bottom: 1rem;
   flex: 1 ;
   justify-content: space-between;
+  cursor: nwse-resize ;
   //height: 50vh;
-//  height: calc(70vw * 9 / 16);
-   outline: 1px solid green;
+  //  height: calc(70vw * 9 / 16);
+  //   outline: 1px solid green;
 }
 
 .panel-carrousel--cadre-vues{
   flex: 1;
   position: relative;
-  overflow: hidden;
-  //width: 100%;
-  //height: 100%;
   // outline: 1px solid green;
-
 }
+
 .panel-carrousel--cadre-img{
-  opacity: 0;
   position: absolute;
-  width: 100%;
   top:0;
+  bottom:1.2rem;
+  left:0;
+  right:0;
   text-align: center;
-  // outline: 1px solid cyan;
+  overflow: hidden;
 }
 
 .panel-cadre-img{
-  // width: 100%;
   min-width: 100%;
   max-width: 100%;
   display: inline-block;
 }
 
+.panel-carrousel--cadre-legende{
+//  margin-top : auto;
+//  background-color: red;
+//  outline: 1px solid cyan;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1rem ;
+  margin-top: auto;
+  text-align: center;
+  font-weight: 300;
+  font-style: italic;
+}
+
 .panel-carrousel--cadre-plots{
   display: block;
+  padding: 0;
+  height: 1.2rem;
   font-size: 2rem;
   text-align: center;
   letter-spacing: 0.5rem;
+  list-style-image: none;
+  color:black;
 }
+
+.plots-current{
+  color: aliceblue;
+}
+
+.panel-carrousel--cadre-plots li{
+  margin: 0 .3rem 0 0 ;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.2s;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.4);
+    color:slategrey;
+    }
+}
+
 .panel-texte-commentaire{
   flex: 1 1 30%;
   width: 30%;
-  margin-top: 1.5rem;
+  //margin-top: 1.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
   li{
@@ -226,9 +278,14 @@ p,img{
 }
 
 .panel-texte--contexte{
-  outline: 1px solid red ;
-  //flex: 0 1 65%;
-  //width: 65%;
+  color: aliceblue;
+  p{
+    margin: 0;
+    font-size: 0.71rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+  }
+//  outline: 1px solid red ;
 }
 
 .panel-close{
@@ -242,6 +299,7 @@ p,img{
   z-index: 1000;
   border: none;
   background-color: transparent ;
+  cursor: pointer;
 
   svg .s1 {
     fill: white;
@@ -249,7 +307,7 @@ p,img{
     stroke: #004080;
     transition: color 0.3s ;
   }
-  svg  .s1:hover {
+  &:hover  .s1 {
     fill: #1AC2E6;
   }
 }
@@ -258,24 +316,14 @@ p,img{
 //  position:fixed;
 }
 .show{
-
-//  left:0;
   opacity: 1;
-//  margin: 0 auto;
-//  display:block;
-//  transform: scale(1) ;
- transition: opacity 0.6s;
+  transition: opacity 0.6s;
 }
 .hide{
   opacity: 0;
   transition-property: opacity, left ;
   transition-delay: 0s, 0.6s;
   transition-duration: 0.6s, 0s ;
-// transition-delay: 0.4s;
-// transition: opacity 0.4s;
-
-//  left: -200%;
-
 }
 .slide-vertical{
     overflow: scroll;
@@ -283,29 +331,18 @@ p,img{
 .vertical{
 //  height:100%;
 //  width:auto;
-img{
-  min-width: inherit;
-  min-height: 100%;
-}
-}
-.plots-current{
-  color: aliceblue;
-}
-.panel-carrousel--cadre-plots{
-  list-style-image: none;
-  color:black;
-  padding: 0;
-}
-.panel-carrousel--cadre-plots li{
-  margin: 0 .3rem 0 0 ;
-  cursor: pointer;
-  display: inline-block;
-  transition: transform 0.2s;
-  &:hover{
-    transform: scale(1.4);
-    color:slategrey;
+  img{
+    min-width: inherit;
+    max-height: 100%;
     }
+  &:hover{
+    img{
+      max-width: 100%;
+      max-height: inherit;
+    }
+  }
 }
+
 
 //////////////////////////
 // ETATS REACT TRANSITIONS
@@ -353,21 +390,7 @@ img{
  transition: height .5s ease-in-out;
 }
 
-// Fondu à ma façon
-.precedent-img-enter {
-  opacity: 1;
-}
-.precedent-img-enter.precedent-img{
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-}
-.current-img-enter {
-  opacity: 0;
-}
-.current-img-enter.current-img{
-  opacity: 1;
-  transition: opacity 0.5s ease-in;
-}
+
 //////////////////////////
 
 #my-scroll {
@@ -377,11 +400,23 @@ img{
   overflow: auto;
 }
 
+// logo dans PORTFOLIO
+.menu-logo.has-panel{
+  transform: translateX(-46px) rotateZ(90deg);
+  clip: rect(0px,100px,40px,0px);
+  position: absolute;
+}
+// reduire la taille du fond du menu
+.short{
+  width: 10px;
+}
 // MOBILE
 
 @media only screen and (max-width: 768px) {
   .panel{
     padding: 0.5rem;
+    flex-flow: column nowrap;
+    height: inherit;
   }
   .panel-carrousel {
     flex: 1 1 100%;
@@ -390,18 +425,29 @@ img{
   .panel-texte-commentaire {
     flex: 1 1 100%;
     width: 100%;
-    margin-top: 1.5rem;
-    padding-left: 0rem;
-    padding-right: 0rem;
+    //margin-top: 1.5rem;
+    // padding-left: 0rem;
+    // padding-right: 0rem;
+    padding: 0.5rem;
+    border-top: 1px solid black;
+    padding-top: 1.5rem;
   }
   .panel-titre {
-    flex: 1 1 100%;
+    flex: 1;
     text-align: center;
     font-family: 'Fira Sans';
     padding-left: 0;
   }
   .panel-carrousel--cadre {
     height: 50vh;
-    min-height: calc(70vw * 9 / 16);
+    min-height: calc(100vw * 9 / 16);
   }
+.sujet .legende-wrapper {
+  right: 5%;
+  max-width: 60%;
+  span {
+    font-size: 0.8em;
+    line-height: 1.2;
+  }
+}
 }

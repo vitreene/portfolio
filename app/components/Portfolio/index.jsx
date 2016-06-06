@@ -1,27 +1,7 @@
-/* a faire :
-- animer l'apparition du panneau ;
-- mettre à jour les détails selon le sujet
-- carrousel du panel;
-- animation du carrousel;
-- responsive;
-
-*/
-
-
-
 import React from 'react'
-//import ReactDOM from 'react-dom'
-// import Marked from 'marked'
-//import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-//import ReactCSSTransitionReplace from 'react-css-transition-replace';
-
 import PanelBox from './panel-box'
 
-console.log('REACT LANCé');
-
 var itemsInRow = 3 ;
-
-
 
 var ControlListeSujetBox = React.createClass({
   getInitialState: function() {
@@ -30,17 +10,35 @@ var ControlListeSujetBox = React.createClass({
       sujet: null
     };
   },
+  componentDidMount: function () {
+    //  console.log('this.props', this.props.details );
+    var imgs = this.props.details.map( function(img) {
+    //    console.log('IMAGES ', img.files[0].file);
+     return require('../../assets/portfolio2/' + img.files[0].file);
+    });
+    this.firstImgs = this.preloadFirst(imgs);
+  },
+
+  firstImgs:[],
+
+  preloadFirst: function (imgs) {
+    return imgs.map(function (el) {
+      var img = new Image() ;
+      img.src = el ;
+      return img ;
+    });
+  },
 
   setTogglePanel: function(etat, event) {
-    console.log('DETECT', etat) ;
-    console.log('event', event) ;
+  //  console.log('DETECT', etat) ;
+  //  console.log('event', event) ;
 
     var panel = {
       'close'  : false,
    //    mettre à jour ou fermer le panel
       'toggle' : (event == this.state.sujet) ? !this.state.togglePanel : true
     };
-    console.log('panel[etat]', panel[etat]) ;
+    //console.log('panel[etat]', panel[etat]) ;
 
     var isSujet = (etat==='toggle' ? event : null ) ;
     var isId =  (isSujet) ? isSujet.toggle.id  : null ;
@@ -66,10 +64,8 @@ var ControlListeSujetBox = React.createClass({
 var ListeSujetBox = React.createClass({
 
   render: function() {
-    //console.log('PROPS:sujets', this.props.data.sujets);
-    //console.log('PROPS:details', this.props.data.details);
-    console.log('PROPS', this.props);
-    console.log('this.props.sujet', (this.props.sujet) );
+    //console.log('PROPS', this.props);
+    //console.log('this.props.sujet', (this.props.sujet) );
     var sujets = [] ;
 
     // 3 conditions pour placer le panel :
@@ -83,7 +79,7 @@ var ListeSujetBox = React.createClass({
     var details =(this.props.sujet) ?
         getDetail(this.props.sujet.toggle.id, this.props.data.details)[0] :
         null;
-        console.log("DETAILS",details);
+        // console.log("DETAILS",details);
 
     for(var i=0; i<this.props.data.sujets.length; i++) {
       var sujet = this.props.data.sujets[i];
@@ -136,7 +132,6 @@ var SujetBox = React.createClass({
   render: function() {
     var lastInRow = 'sujet' + (this.props.isFinDeLigne ? ' last' : '' ) ;
     var bgImg = require('../../assets/portfolio2/' + this.props.data.vignette);
-    // style = {{backgroundImage:'url( ../../assets/portfolio2/' + this.props.data.vignette + ')' }}
 
     return (
     <li
@@ -155,20 +150,4 @@ var SujetBox = React.createClass({
 });
 
 
-
-
-
-
 export default ControlListeSujetBox ;
-/*
-ReactDOM.render(
-  <ControlListeSujetBox data={sujets}/>,
-  document.getElementById('box')
-);
-*/
-/*
-ReactDOM.render(
-  <ListeSujetBox data={sujets}/>,
-  document.getElementById('box')
-);
-*/

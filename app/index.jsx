@@ -13,11 +13,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //import Application from './components/Application';
 import Portfolio from './components/Portfolio';
+import ActiverContact from './components/Portfolio/activer-contact';
 import {sujets} from  './portfolio-data-sujets.json';
 import {details} from './portfolio-data-details.json';
 //import details from './portfolio-data-details.json';
 
+
+//import {ActiverMenu} from './components/Portfolio'
+//ActiverMenu.menuClose() ;
+
 console.log('sujets', sujets);
 console.log('details', details);
+
 //ReactDOM.render(<Application />, document.getElementById('app'));
 ReactDOM.render(<Portfolio sujets = {sujets} details = {details} />, document.getElementById('portfolio'));
+
+
+
+// afficher le formulaire
+document.addEventListener('DOMContentLoaded', ActiverContact ) ;

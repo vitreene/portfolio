@@ -10,6 +10,7 @@ var CarrouselPanel = React.createClass({
 
   getInitialState: function(){
     return{
+      // id : this.props.id,
       vue    : 0,
       active : false,
       pause  : false,
@@ -29,39 +30,34 @@ var CarrouselPanel = React.createClass({
     };
     const duree = durees[this.props.modele] ;
     // initialiser le timer
-    this.setState({timer : this.setInterval(this.timer, duree, true) });
-
+    this.setState({timer : this.setInterval(this.timer, duree, true) }); // Call a method on the mixin
     window.addEventListener('keydown', this.keypressed);
     // preload des images du carrousel
-    this.updateImgs(this.props.data) ;
-    /*
-    this.images = this.props.data.map( function(img) {
-    //    console.log('IMAGES ', img.files[0].file);
-     return require('../../assets/portfolio2/' + img.file);
-    });
-    this.preload(this.images);
-    */
-  },
 
+    this.updateImgs(this.props.files) ;
+  },
 
   componentWillUnmount: function() {
     window.removeEventListener('keydown', this.keypressed);
   },
-
-  componentWillReceiveProps: function (next) {
-    console.log('id',this.props,this.props.id ,next.id) ;
+/*
+  this.enter = 0 ;
+  this.leave = null ;
+  this.images = [] ;
+  */
+  componentWillReceiveProps: function (nextProps) {
+    console.log('ID', this.props.id, nextProps.id);
+   //if (nextProps.id !== this.props.id) this.updateImgs(nextProps.files) ;
   },
 
-  componentWillUpdate: function(a,next) {
+  componentWillUpdate: function(next) {
     // mise à jour des numéros d'images
+    // console.log('vue', this.state.vue,'next vue', next.vue);
     if (this.state.vue !== next.vue) {
       this.leave = this.state.vue ;
       this.enter = next.vue ;
     }
-console.log('ID',this.props.id , a.id);
-    if (this.props.id !== a.id)  {
-    this.updateImgs(a.data) ;
-  }
+
   },
 
   componentDidUpdate: function() {
@@ -72,11 +68,10 @@ console.log('ID',this.props.id , a.id);
         this.setState( {active : true} ) ;
         }.bind(this) )
         */
-        
       // simplification pour etablir un délai de transition
       setTimeout( function () {
         this.setState( {active : true} ) ;
-      }.bind(this), 60 ) ;
+      }.bind(this),50 ) ;
     }
   },
 
@@ -105,10 +100,12 @@ console.log('ID',this.props.id , a.id);
   },
 
   timer:function(next){
-    next = (typeof(next) == 'Number' ) ? next : !this.state.pause ;
+    //console.log('next', next);
     if (!next) return ;
-    var visible = (this.state.vue + next) % this.props.data.length ;
+    // if (typeof(next) !== 'Number' )  next = !this.state.pause ;
+    let visible = (this.state.vue + next) % this.props.data.length ;
     visible = (visible < 0) ? this.props.data.length -1 : visible ;
+    //console.log('NEXT', next, 'VISIBLE', visible);
     this.setState({vue : visible});
     this.setState({active : false}) ;
   },
@@ -139,13 +136,13 @@ console.log('ID',this.props.id , a.id);
       '37' : -1, // fleche gauche
       '39' : 1 // fleche droite
     };
-    // console.log('KEY', event.keyCode, charCode[event.keyCode] );
+    console.log('KEY', event.keyCode, charCode[event.keyCode] );
     clearInterval(this.state.timer) ;
     this.timer(charCode[event.keyCode] || 0 ) ;
   },
 
   render: function(){
-    var imgs = [
+    const imgsIndex = [
       this.leave,
       this.enter
     ];
@@ -153,8 +150,8 @@ console.log('ID',this.props.id , a.id);
       <div className= "panel-carrousel--cadre">
         <Imgs
           images = {this.images}
-          imgs   = {imgs}
-          data   = {this.props.data}
+          imgsIndex   = {imgsIndex}
+          files   = {this.props.files}
           active = {this.state.active}
           start  = {this.toggle}
           enter  = {this.pause}
@@ -164,7 +161,7 @@ console.log('ID',this.props.id , a.id);
           goto    = {this.goto}
           enter   = {this.pause}
           leave   = {this.play}
-          length  = {this.props.data.length}
+          length  = {this.props.files.length}
           current = {this.state.vue}
           />
       </div>
@@ -177,15 +174,13 @@ var Imgs = React.createClass({
   // pour le fondu enchainé, deux images : enter et leave
   creerIMG: function(el, i){
     // au départ leave n'est pas défini
-    if (el===null || el===undefined) return ;
+    if (el===null) return ;
 
-    const img = this.props.data[el] ;
+    const img = this.props.files[el] ;
     //var bgImg = require('../../assets/portfolio2/' + img.file ) ;
     const bgImg = this.props.images[el] ;
 
-    // si les images ne sont pas encore disponibles
-    if (!img || !bgImg) return ;
-
+    console.log('img', el, img, bgImg);
     // le premier élément i=0 est leave
     const visible = (i) ? '-enter' : '-leave' ;
     const effect = ' cross-fade' ;
@@ -221,14 +216,14 @@ legende: function (i, legende) {
 },
   render: function(){
    // couple précedent, actuel; filtrer si precedent = null
-   const imgs = this.props.imgs
+   const imgsIndex = this.props.imgsIndex
    .map( this.creerIMG )
    .filter(function(el){
      return el ;
    }) ;
    return(
      <div className="panel-carrousel--cadre-vues">
-       {imgs}
+       {imgsIndex}
      </div>
    );
   }

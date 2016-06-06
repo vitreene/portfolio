@@ -1,9 +1,9 @@
 
 Carousel panel.
 
-realiser un fondu-enchainé.
+√ realiser un fondu-enchainé.
 
-demande deux images, l'ancienne, la nouvelle.
+√ demande deux images, l'ancienne, la nouvelle.
 au début d'un cycle :
 - nouvelle devient ancienne ;
   - opacité : 1
@@ -12,11 +12,11 @@ au début d'un cycle :
   -opacité : 0
   - appliquer fade-in ;
 
-Les positions sont en absolute pour bien se superposer
-  Est-il utile de supprimer l'image après disparition ? après tout, elle n'est pas visible.
+√ Les positions sont en absolute pour bien se superposer
+√   Est-il utile de supprimer l'image après disparition ? après tout, elle n'est pas visible.
 
   appliquer un spinner au chargement ;
 
-  ajouter un preloder qui s'active
+√  ajouter un preloder qui s'active
     - à l'ouverture du carrousel;
     - au chargement de la page : la remière image de chaque item.

@@ -3,7 +3,7 @@
     {
       "id": "sujet001",
       "vignette": "home-huwans-vgn.jpg",
-      "vignetteTitre": "e-commerce : Accueil",
+      "vignetteTitre": "E-commerce : accueil",
       "categorie": "site",
       "type": "web",
       "marque": "huwans clubaventure"
@@ -11,7 +11,7 @@
     {
       "id": "sujet002",
       "vignette": "catal-club-vgn.jpg",
-      "vignetteTitre": "treks et randonnées : catalogue",
+      "vignetteTitre": "Treks et randonnées : catalogue",
       "categorie": "catalogue",
       "type": "print",
       "marque": "clubaventure"
@@ -26,11 +26,35 @@
     },
     {
       "id": "sujet004",
+      "vignette": "golf-away-vgn.jpg",
+      "vignetteTitre" : "Changement de marque",
+      "categorie": "identite",
+      "type": "print",
+      "marque": "Golf-away"
+    },
+    {
+      "id": "sujet005",
       "vignette": "recherch-vgn.jpg",
-      "vignetteTitre" : "page de recherche",
+      "vignetteTitre" : "Page de recherche",
       "categorie": "site",
       "type": "web",
       "marque": "huwans clubaventure"
+    },
+    {
+      "id": "sujet006",
+      "vignette": "femmes-du-monde-vgn.jpg",
+      "vignetteTitre" : "Identité visuelle",
+      "categorie": "identite",
+      "type": "print",
+      "marque": "femmes du monde"
+    },
+    {
+      "id": "sujet007",
+      "vignette": "recherch-vgn.jpg",
+      "vignetteTitre" : "Sélection d'affiches",
+      "categorie": "affiche",
+      "type": "print",
+      "marque": ""
     }
   ]
 }

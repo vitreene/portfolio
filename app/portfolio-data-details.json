@@ -4,11 +4,6 @@
 		"modele": "defaut",
 		"titre": "Page d’accueil",
 		"intro": "### La marque \n Huwans est un tour-opérateur spécialisé dans le voyage-randonnée en groupes constitués, dans le monde entier. \n\nCette approche singulière du voyage – le slow travel – nécessite d’en expliquer le concept, tout en gardant la priorité sur l’approche commerciale de la vente.",
-		"files1": {
-			"file": "home-huwans-01.jpg",
-			"legende": "page d’accueil du site",
-			"action": "slide-vertical"
-		},
 		"files": [{
 			"file": "home-huwans-01.jpg",
 			"legende": "page d'accueil du site",
@@ -26,8 +21,9 @@
 			"legende": "détail de la recherche",
 			"action": "vertical"
 		}],
-		"texte": "### Carrousel corporate \nDéprécié, le carrousel est acceptable dans ce cas ou un seul  concept est exprimé par plusieurs images. Ici, des situations identiques de rencontres sur plusieurs continents, réunis par une même accroche. \n### Le détail  \n Un slider propose une sélection de voyages dont il n'est montré qu’une partie. L’ombré de part et d’autre donne la sensation d’une découpe à travers laquelle défilent les offres. \n\nLa plus à droite est légèrement tronquée pour accentuer l’impression. Les flèches et l’ascenseur horizontal, très discrets, vient confirmer la possibilité d'un défilement. \n ### CTA \n L’action privilégiée sur cette page est d’initier une recherche. Le bloc déborde sur l’image du carrousel, le calcul du nombre d’offres disponibles se met à jour dynamiquement."
-	}, {
+		"texte": "### Carrousel corporate \nDéprécié, le carrousel est acceptable dans ce cas ou un même concept se trouve exprimé par plusieurs images. Ici, des situations identiques de rencontres sur plusieurs continents, réunies par une même accroche. \n### Le détail  \n Un slider propose une sélection de voyages dont il n'est montré qu’une partie. L’ombré de part et d’autre donne la sensation d’une découpe à travers laquelle défilent les offres. \n\nLa plus à droite est légèrement tronquée pour accentuer l’effet. Les flèches et l’ascenseur horizontal, très discrets, confirment le défilement possible. \n ### CTA \n L’action privilégiée sur cette page est d’initier une recherche. Le bloc déborde sur l’image du carrousel, le calcul du nombre d’offres disponibles se met à jour dynamiquement."
+	},
+	{
 		"id": "sujet002",
 		"modele": "defaut",
 		"titre": "Catalogues de voyage",
@@ -46,7 +42,8 @@
 			"file": "catal-club-06.jpg"
 		}],
 		"texte": "Ces brochures ont un rythme de parution bisannuel, leur tirage est de l’ordre de 60 à 80 000 ex. Elles comportent jusqu’à 400 pages et 2 variantes pour les prix affichés en euros ou en francs suisses. \n\nLa maquette est conçue pour être très souple d’usage&nbsp;: le moins possible de blocs, le plus de rendus contrôlés par les feuilles de styles. \n\nLes différentes déclinaisons de gamme – jusqu’à huit – fonctionnent sur un socle commun, avec des ajustement relatifs au positionnement du catalogue&nbsp;: plus aéré pour les voyages d’exception, plus détaillé pour les voyages en famille par exemple. \n\nElles sont réalisées avec une équipe interne en six à huit semaines. Des process d’automatisation partiels sont plis en place - voir en particulier [l’article](http://vitreene.com/articles/un-catalogue-papier-est-un-site-web-comme-un-autre/) sur ce sujet."
-	}, {
+	},
+	{
 		"id": "sujet003",
 		"modele": "defaut",
 		"titre": "Ventes privées",
@@ -62,7 +59,7 @@
 		}, {
 			"file": "av-prem-02.jpg",
 			"legende": "annonce display",
-			"action": ""
+			"action": "vertical"
 		}, {
 			"file": "av-prem-03.jpg",
 			"legende": "annonce display",
@@ -70,7 +67,7 @@
 		}, {
 			"file": "av-prem-04.jpg",
 			"legende": "annonce display",
-			"action": "superpose"
+			"action": "vertical superpose"
 		}, {
 			"file": "av-prem-05.jpg",
 			"legende": "annonce display",
@@ -84,9 +81,32 @@
 			"legende": "zoning de la page d'accueil",
 			"action": "vertical"
 		}],
-		"texte": "Conception d'un mini-site pour permettre l’inscription à des ventes privées de voyages. \n\nRelayé par une campagne d’e-mailing, achat d’espaces, réseau Display. \n\nLes visuels, tirés de documents de voyage, sont découpés pour permettre les diverses combinaisons de format.  - [voir article](#) - \n ### Le détail. \n\nLa présentation des ventes propose deux actions distinctes&nbsp;: se rendre sur la listes des voyages, et s’inscrire aux e-mails. Nous avons noté une faiblesse des inscriptions et engagé des actions correctives :  \n   - amélioration du retour sur le mini site après la visite des voyages, \n   - mieux différencier les boutons d’action. L’inscription aux alertes à pris la forme d’un interrupteur on/off. "
-	}, {
+		"texte": "**Conception d'un mini-site pour permettre l’inscription à des ventes privées de voyages.** \n\nRelayé par une campagne d’e-mailing, achat d’espaces, réseau Display. \n\nLes visuels, tirés de documents de voyage, sont découpés pour permettre les diverses combinaisons de format.  *- [article à venir](#) -* \n ### Le détail. \n\nLa présentation des ventes propose deux actions distinctes&nbsp;: se rendre sur la listes des voyages, et s’inscrire aux e-mails. Nous avons noté une faiblesse des inscriptions et engagé des actions correctives :  \n   - amélioration du retour sur le mini site après la visite des voyages, \n   - mieux différencier les boutons d’action. L’inscription aux alertes à pris la forme d’un interrupteur on/off. "
+	},
+	{
 		"id": "sujet004",
+		"modele": "defaut",
+		"titre": "de Sport-Away golf à Golf-Away",
+		"intro": "### La marque \n Golf-Away est un tour opérateur proposant une sélection de voyages associant un séjour à la pratique du golf sur les plus beaux parcours du monde.",
+		"files": [{
+			"file": "SP-golf-brochure.jpg",
+			"legende": "plaquette Sport-Avay golf",
+			"action": ""
+		},
+		{
+			"file": "plq-golf-away.jpg",
+			"legende": "plaquette et identité visuelle",
+			"action": ""
+		},
+		{
+			"file": "logo-golf-away-2.jpg",
+			"legende": "logo Golf-Away",
+			"action": ""
+		}],
+		"texte": "Le golf est l’une des spécialités de Sport-away voyages, tour opérateur du voyage sportif.  \n\nInitialement regroupées dans un catalogue unique, l’offre peine à se démarquer des autres activités et ne trouve pas son public. Les offres sportives sont alors séparées en autant de catalogues et affirment progressivement leur caractère. \n\nBasée sur une production annuelle, la ligne graphique des publications répond à la stratégie de la marque. A la séparation des catalogues, les couvertures partagent un motif commun en mosaïque, et une couleur spécifique. La couleur sera gardée lors de l’itération suivante, le ton évolue pour pour se rapprocher de la clientèle cible et monte en gamme. \n\nLe changement de marque voit la création du nouveau logo, les documents de communication suivent le repositionnement qui se rapproche d’une cible plus jeune."
+	},
+	{
+		"id": "sujet005",
 		"modele": "defaut",
 		"titre": "Résultats de recherche",
 		"intro": "### La marque \n Huwans est un tour-opérateur spécialisé dans le voyage-randonnée en groupes constitués, dans le monde entier. \n\nCette approche singulière du voyage – le slow travel – nécessite d’en expliquer le concept, tout en gardant la priorité sur l’approche commerciale de la vente.",
@@ -107,6 +127,51 @@
 			"legende": "remise à zéro des dates",
 			"action": ""
 		}],
-		"texte": "### Améliorer l’existant. \n La recherche à facettes propose de nombreux critères  sans hiérarchie. Un analyse a montré que les critères les plus fréquemment employés étaient la destination et les dates, pour un type de voyage donné. \n\nLe choix a été fait de pré-sélectionner ces principaux critères sur une zone horizontale. Les critères secondaires sont regroupés dans la sidebar et servent à affiner la sélection. \n\nLa présentation des voyages est toujours un arbitrage difficile sur les critères à retenir, c’est pourquoi plusieurs vues sont proposées, valorisant la description, l’image ou l’itinéraire. \n\nDans la vue descriptive, une version propose des listes raccourcies, un cliquet permet de déployer une vue plus détaillée. Cette proposition sera sans suite. \n ###Le détail. \n\nLes critères sur la ligne horizontale peuvent être retirés en  cliquant sur la petite croix. Ils se retrouvent alors dans la sidebar. Cependant, pour les dates, qui est un critère impératif, la croix permet tout simplement la remise à zéro de la période recherchée. "
-	}]
+		"texte": "### Améliorer l’existant. \n La recherche à facettes propose de nombreux critères d’égale impor&shy;tance. Une étude d'usages a montré que les critères les plus fréquents étaient la destination et les dates, pour un type de voyage donné. \n\nCes critères principaux sont pré-selectionnés dans une zone au-dessus des résultats, les secondaires sont regroupés dans la sidebar. \n\nDans la vue en liste, une étude propose des listes raccourcies, un cliquet permet de déployer une vue plus détaillée. Cette proposition sera sans suite. \n ### Le détail. \n\nLes critères pré-sélectionnés peuvent être retirés en  cliquant sur la croix de fermeture. Ils se retrouvent alors dans la sidebar. Cependant, pour les dates, qui est un critère impératif, la croix permet tout simplement la remise à zéro de la période recherchée. "
+	},
+	{
+		"id": "sujet006",
+		"modele": "lightbox",
+		"titre": "Femmes du Monde",
+		"intro": "### La marque \n Femmes du Monde propose des voyages en petit groupe exclusivement féminins, pour un rythme de voyage et un choix d'activités adaptés.",
+		"files": [{
+			"file": "femmes-dumonde02.jpg",
+			"legende": "Création de l'identité visuelle",
+			"action": ""
+		}, {
+			"file": "femmes-dumonde.jpg",
+			"legende": "Les brochures de voyage",
+			"action": ""
+		}, {
+			"file": "femmes-du-monde-logo.jpg",
+			"legende": "Détails ornementaux près du logo",
+			"action": ""
+		}],
+		"texte": ""
+	},
+	{
+		"id": "sujet007",
+		"modele": "lightbox",
+		"titre": "Sélection d'affiches",
+		"intro": "Une sélection d'affiches",
+		"files": [{
+			"file": "av-prem-10.jpg",
+			"legende": "liste des ventes",
+			"action": ""
+		}, {
+			"file": "av-prem-12.jpg",
+			"legende": "inscription",
+			"action": ""
+		}, {
+			"file": "av-prem-02.jpg",
+			"legende": "annonce display",
+			"action": "vertical"
+		}, {
+			"file": "av-prem-03.jpg",
+			"legende": "annonce display",
+			"action": "vertical superpose"
+		}],
+		"texte": ""
+	}
+]
 }

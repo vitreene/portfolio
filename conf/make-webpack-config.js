@@ -30,7 +30,7 @@ module.exports = function(options) {
 
   return {
     entry: options.production ? './app/index.jsx' : [
-      'webpack-dev-server/client?http://localhost:8080',
+      'webpack-dev-server/client?http://localhost:8008',
       'webpack/hot/only-dev-server',
       './app/index.jsx',
       './app/vendor/main.min.js',
@@ -43,11 +43,16 @@ module.exports = function(options) {
       }
       */
     ],
+    devServer: {
+       host: '0.0.0.0',
+      inline:true,
+      port: 8008
+    },
     debug: options.production,
     devtool: options.devtool,
     output: {
       path: options.production ? './dist' : './build',
-      publicPath: options.production ? '' : 'http://localhost:8080/',
+      publicPath: options.production ? 'http://localhost:8008/' : 'http://localhost:8008/',
       filename: options.production ? 'app.[hash].js' : 'app.js',
     },
     module: {
@@ -116,6 +121,10 @@ module.exports = function(options) {
     //    }
     },
     plugins: options.production ? [
+      new webpack.ProvidePlugin({
+        // $: "jquery"
+        activerMenu : "activerMenu",
+      }),
       // Important to keep React file size down
       new webpack.DefinePlugin({
         "process.env": {

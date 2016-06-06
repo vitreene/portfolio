@@ -32,16 +32,16 @@ const PanelBox = React.createClass({
   },
   render: function(){
     let classPanel = 'panel ' + this.props.data.modele ;
-    let transitionsOptions = {
-      transitionName: "open-panel",
-      transitionAppear: true,
-      transitionAppearTimeout: 500,
-      transitionEnterTimeout: 500,
-      transitionLeaveTimeout: 300
-    };
+
+    console.log(this.props.data.id, this.props.data.files);
+    
     return (
     <ReactCSSTransitionGroup
-      {...transitionsOptions}
+      transitionName="open-panel"
+      transitionAppear={true}
+      transitionAppearTimeout={500}
+      transitionEnterTimeout={500}
+      transitionLeaveTimeout={300}
       component = 'div'
       className={classPanel}
       id="panel"
@@ -54,19 +54,20 @@ const PanelBox = React.createClass({
         <h2 className = "panel-titre">{this.props.data.titre}</h2>
         <div className = "panel-carrousel">
           <CarrouselPanel
-            data = {this.props.data.files}
-            id = {this.props.data.id}
+            files = {this.props.data.files}
             modele = {this.props.data.modele}
-             />
-          <article className = "panel-texte--contexte"
-          dangerouslySetInnerHTML={this.rawMarkup(this.props.data.intro)}
+            id = {this.props.data.id}
+          />
+          <article
+            className = "panel-texte--contexte"
+            dangerouslySetInnerHTML={this.rawMarkup(this.props.data.intro)}
           />
         </div>
         <article
           className = "panel-texte-commentaire"
           dangerouslySetInnerHTML =
           {this.rawMarkup(this.props.data.texte)}
-          />
+        />
     </ReactCSSTransitionGroup>
     );
   }
